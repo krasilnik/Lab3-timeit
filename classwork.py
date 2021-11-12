@@ -13,7 +13,7 @@ for line in f1.readlines():
         res+=1
 f1.close()
 """
-print(timeit(s, number=10))
+print(timeit(s, number=100))
 
 s = """
 res = 0
@@ -23,7 +23,7 @@ for line in f2:
         res+=1
 f2.close()
 """
-print(timeit(s, number=10))
+print(timeit(s, number=100))
 
 s = """
 f3 = open("text.txt", "r")
@@ -31,8 +31,8 @@ res = sum(int(line.strip().isdigit()) for line in f3)
 f3.close()
 """
 
-print(timeit(s, number=10))
+print(timeit(s, number=100))
 
-# 1.8392863
-# 1.6402581000000003
-# 1.6764083000000003
+#17.1188628
+#16.992356299999997
+#16.6239755
